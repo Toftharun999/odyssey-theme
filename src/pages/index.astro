@@ -5,88 +5,322 @@ import Layout from '../layouts/Page.astro';
 import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
 ---
 
-<Layout>
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h2>Landing Pages</h2>
-			<p>
-				Use one of our landing pages to jumpstart your website or
-				ad campaign.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/landing-pages/landing-1" title="Landing Page 1" imgSrc="/assets/images/home/screenshots/landing-1">
-				</FeatureCard>
-				<FeatureCard href="/landing-pages/landing-2" title="Landing Page 2" imgSrc="/assets/images/home/screenshots/landing-2">
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+<Layout title="Design Heaven Interiors - Luxury Interior Design">
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <img src="/images/logo.jpg" alt="Design Heaven Interiors" class="hero-logo">
+        <h1>Welcome to Design Heaven Interiors</h1>
+        <p class="tagline">Elevate Your Space, Elevate Your Life</p>
+        <p class="description">
+          Transform your living spaces into extraordinary sanctuaries of luxury and elegance. 
+          Our expert team specializes in creating bespoke interior designs that reflect your 
+          unique vision and lifestyle.
+        </p>
+        <div class="cta-buttons">
+          <a href="#portfolio" class="btn btn-primary">Explore Portfolio</a>
+          <a href="#contact" class="btn btn-secondary">Get Consultation</a>
+        </div>
+      </div>
+    </section>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Company Pages</h2>
-			<p>
-				Use one of our prebuilt company pages for your about page, contact page,
-				legal pages, blog posts, etc.
-			</p>
-			<div class="feature-card__grid">
-				<FeatureCard href="/company/about" title="About Page" imgSrc="/assets/images/home/screenshots/about">
-				</FeatureCard>
-				<FeatureCard href="/company/contact" title="Contact Page" imgSrc="/assets/images/home/screenshots/contact">
-				</FeatureCard>
-				<FeatureCard href="/blog/" title="Blog Page" imgSrc="/assets/images/home/screenshots/blog">
-				</FeatureCard>
-				<FeatureCard
-					href="/blog/posts/remote-work-mental-health"
-					title="Blog Post"
-          imgSrc="/assets/images/home/screenshots/blog-post"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/company/legal"
-					imgSrc="/assets/images/home/screenshots/legal"
-					title="Legal Page"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+      <h2>Our Portfolio</h2>
+      <p class="section-subtitle">Curated Projects Showcasing Excellence in Design</p>
+      <div class="portfolio-grid">
+        <Card 
+          title="Luxury Living Spaces"
+          body="Sophisticated living room designs featuring premium materials and timeless aesthetics"
+          href="#"
+        />
+        <Card 
+          title="Contemporary Bedrooms"
+          body="Serene and luxurious bedroom designs for ultimate comfort and relaxation"
+          href="#"
+        />
+        <Card 
+          title="Premium Kitchens"
+          body="State-of-the-art kitchen designs combining functionality with aesthetic excellence"
+          href="#"
+        />
+        <Card 
+          title="Outdoor Living"
+          body="Exceptional outdoor furniture and design for your exterior spaces"
+          href="#"
+        />
+      </div>
+    </section>
 
-	<Container>
-		<section class="feature-card__section">
-			<h2>Theme Pages</h2>
-			<p>Learn more about how to set up and use the Odyssey Theme.</p>
-			<div class="feature-card__grid">
-				<FeatureCard
-					href="/theme/get-started"
-					imgSrc="/assets/images/home/screenshots/get-started"
-					title="Get Started"
-				>
-				</FeatureCard>
-				<FeatureCard
-					href="/theme/style-guide"
-					imgSrc="/assets/images/home/screenshots/style-guide"
-					title="Style Guide"
-				>
-				</FeatureCard>
-			</div>
-		</section>
-	</Container>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Get in Touch</h2>
+      <p>Ready to elevate your space? Contact us for a free consultation.</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Tell us about your project" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary">Send Inquiry</button>
+      </form>
+    </section>
+
+    <!-- Footer with Social Links -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.jpg" alt="Design Heaven Interiors" class="footer-logo-img">
+          <p>&copy; 2025 Design Heaven Interiors. All rights reserved.</p>
+        </div>
+        <div class="footer-socials">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <style>
+    /* High-End Gold & Black Color Scheme */
+    :root {
+      --color-gold: #D4AF37;
+      --color-dark: #1a1a1a;
+      --color-light: #f5f5f5;
+      --color-white: #ffffff;
+      --color-gray: #666666;
+    }
+
+    main {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--color-dark);
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--color-dark) 0%, #2a2a2a 100%);
+      color: var(--color-white);
+      padding: 80px 20px;
+      text-align: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero-logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 30px;
+      filter: drop-shadow(0 4px 6px rgba(212, 175, 55, 0.3));
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin: 20px 0;
+      letter-spacing: 2px;
+    }
+
+    .tagline {
+      font-size: 1.8rem;
+      color: var(--color-gold);
+      font-weight: 300;
+      margin: 15px 0 30px;
+      letter-spacing: 1px;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: var(--color-light);
+      margin-bottom: 40px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 16px 40px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.3s ease;
+      letter-spacing: 1px;
+    }
+
+    .btn-primary {
+      background: var(--color-gold);
+      color: var(--color-dark);
+      box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: #e5c158;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--color-gold);
+      border: 2px solid var(--color-gold);
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-gold);
+      color: var(--color-dark);
+    }
+
+    /* Portfolio Section */
+    .portfolio {
+      padding: 80px 20px;
+      background: var(--color-light);
+    }
+
+    .portfolio h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      color: var(--color-dark);
+    }
+
+    .section-subtitle {
+      text-align: center;
+      color: var(--color-gray);
+      margin-bottom: 50px;
+      font-size: 1.1rem;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 80px 20px;
+      background: var(--color-white);
+      text-align: center;
+    }
+
+    .contact h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--color-dark);
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 15px;
+      border: 2px solid var(--color-gold);
+      border-radius: 5px;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .footer-logo-img {
+      width: 80px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .footer-socials h4 {
+      color: var(--color-gold);
+      margin-bottom: 15px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .social-links a {
+      color: var(--color-gold);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
+
+    .social-links a:hover {
+      color: var(--color-white);
+      text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .tagline {
+        font-size: 1.4rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </Layout>
 
-<style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
-</style>
+
